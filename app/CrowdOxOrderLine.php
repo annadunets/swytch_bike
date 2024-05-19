@@ -15,7 +15,16 @@ class CrowdOxOrderLine extends Model
      * @var array
      */
     protected $fillable = [
-        'crowd_ox_id', 'type', 'crowd_ox_project_id', 'crowd_ox_order_id', 'crowd_ox_product_id', 'raw_data'
+        'crowd_ox_id',
+        'type',
+        'crowd_ox_project_id',
+        'crowd_ox_order_id',
+        'crowd_ox_product_id',
+        'raw_data',
+        'crowd_ox_line_type',
+        'crowd_ox_price_product',
+        'crowd_ox_price_shipping',
+        'crowd_ox_price_total'
     ];
 
     public function crowdOxProject() {
@@ -33,7 +42,5 @@ class CrowdOxOrderLine extends Model
     public function crowdOxOrderSelections() {
         return $this->hasMany(CrowdOxOrderSelection::class);
     }
-
-
 
 }

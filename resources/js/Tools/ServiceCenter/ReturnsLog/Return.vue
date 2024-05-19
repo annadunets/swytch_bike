@@ -137,7 +137,7 @@ import DateFormEntry from '../../../Components/Form/DateFormEntry.vue'
         });
       },
       clickDiscard() {
-        axios.put("/api/tools/servicecenter/" + this.serviceCenterId + "/returnslog/" + this.return.id)
+        axios.delete("/api/tools/servicecenter/" + this.serviceCenterId + "/returnslog/" + this.return.id)
           .then(() => {
             this.redirectToIndex(0.5);
         });
